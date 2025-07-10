@@ -33,7 +33,7 @@
 <%-- Header Start --%>
 <div class="jumbotron text-center" style="margin-bottom:0">
     <h1>HTML5 & JavaScript</h1>
-    <p>HTML5, CSS, JavaScript, jQuery, AJAX</p>
+    <p>HTML5, CSS, JavaScript, JQuery, AJAX</p>
 </div>
 <%-- Header End --%>
 
