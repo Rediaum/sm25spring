@@ -25,12 +25,13 @@
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
-        <div class="form-group" style="margin-right: 500px;">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required>
+        <div class="from-group" style="margin-right: 500px;">
+            <label for="demo">Email:</label>
+            <input type="text" class="form-control" placeholder="Enter email" id="email" name="email" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
+        <hr>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
 
