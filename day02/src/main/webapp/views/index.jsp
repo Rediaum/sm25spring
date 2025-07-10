@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,13 +13,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .fakeimg {
-            height: 200px;
+            height: 150px;
             background: #aaa;
         }
     </style>
 </head>
 <body>
-
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/about">About Us</a>
+    </li>
+</ul>
 <%-- Header Start --%>
 <div class="jumbotron text-center" style="margin-bottom:0">
     <h1>HTML5 & JavaScript</h1>
@@ -26,36 +37,25 @@
 </div>
 <%-- Header End --%>
 
-<ul class="nav justify-content-end">
-    <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
-    </li>
-</ul>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">HTML</a>
+                <a class="nav-link" href="/html">HTML</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CSS</a>
+                <a class="nav-link" href="/css">CSS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">JavaScript</a>
+                <a class="nav-link" href="/js">JavaScript</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">JQuery</a>
+                <a class="nav-link" href="/jq">JQuery</a>
             </li>
         </ul>
     </div>
@@ -64,34 +64,30 @@
 <div class="container" style="margin-top:30px; margin-bottom:30px;">
     <div class="row">
         <%-- Left Menu Start --%>
-        <div class="col-sm-3">
-            <p>Left Main</p>
-            <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
-            <hr class="d-sm-none">
-        </div>
+        <c:choose>
+            <c:when test="${left == null}">
+                <jsp:include page="left.jsp"/>
+            </c:when>
+            <c:otherwise>
+                <jsp:include page="${left}.jsp"/>
+            </c:otherwise>
+        </c:choose>
             <%-- Left Menu End --%>
 
             <%-- Center Menu Start --%>
-        <div class="col-sm-9">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg">Fake Image</div>
-        </div>
+            <c:choose>
+                <c:when test="${center == null}">
+                    <jsp:include page="center.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="${center}.jsp"/>
+                </c:otherwise>
+            </c:choose>
             <%-- Center Menu End --%>
     </div>
 </div>
 
-<div class="text-center" style="backgroud-color:black; color:white; margin-bottom:0; max-height:10px;">
+<div class="text-center" style="background-color:black; color:white; margin-bottom:0; max-height:50px;">
     <p>Footer</p>
 </div>
 
