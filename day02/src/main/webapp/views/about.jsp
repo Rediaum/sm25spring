@@ -5,7 +5,6 @@
 <div class="col-sm-9">
     <h2>About Page</h2>
     <h5>About us</h5>
-
     <div class="form-check">
         <label class="form-check-label">
             <input type="radio" class="form-check-input" name="optradio">Male

@@ -19,6 +19,12 @@
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
+        <div class="form-group" style="margin-right:500px;">
+            <label for="pwd">Re-Password:</label>
+            <input type="password" class="form-control" placeholder="Enter re-password" id="pwd" name="pwd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
         <div class="form-group" style="margin-right: 500px;">
             <label for="name">Name:</label>
             <input type="text" class="form-control" placeholder="Enter Name" id="name" name="name" required>
