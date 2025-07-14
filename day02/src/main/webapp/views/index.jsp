@@ -57,6 +57,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/jq">JQuery</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/ajax">AJAX</a>
+            </li>
         </ul>
     </div>
 </nav>
