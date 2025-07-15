@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%-- Left Field --%>
-<div class="col-sm-3">
+<div class="col-sm-2">
   <p>Left Main</p>
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">

@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -17,6 +17,26 @@
             background: #aaa;
         }
     </style>
+    <script>
+        let index = {
+            init:function(){
+                let url = '/gettime';
+
+                setInterval(()=>{
+                    $.ajax({
+                        url:url,
+                        success:(data)=>{
+                            $('#ctime').text(data);
+                        },
+                        error:()=>{}
+                    });
+                }, 1000);
+            }
+        }
+        $().ready(()=>{
+            index.init();
+        });
+    </script>
 </head>
 <body>
 <ul class="nav justify-content-end">
@@ -33,7 +53,8 @@
 <%-- Header Start --%>
 <div class="jumbotron text-center" style="margin-bottom:0">
     <h1>HTML5 & JavaScript</h1>
-    <p>HTML5, CSS, JavaScript, JQuery, AJAX</p>
+    <h5>HTML,CSS,JavaScript,JQuery,AJAX</h5>
+    <p id="ctime"></p>
 </div>
 <%-- Header End --%>
 
