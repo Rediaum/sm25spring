@@ -2,6 +2,7 @@ package eud.sm.controller;
 
 import eud.sm.dto.HotItem;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
@@ -9,6 +10,14 @@ import java.util.*;
 
 @RestController
 public class AjaxImplController {
+    @RequestMapping("/checkid")
+    public String checkId(@RequestParam("id") String id){
+        String result = "1";
+        if("qqq".equals(id) || "aaa".equals(id) || "wwww".equals(id)){
+            result = "0";
+        }
+        return result;
+    }
 
     // 이전 순위를 저장하기 위한 Map
     private Map<String, Integer> previousRanking = new HashMap<>();

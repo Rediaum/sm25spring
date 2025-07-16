@@ -2,17 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%-- Left Field --%>
-<div class="col-sm-2">
-  <p>Left Main</p>
+<div class="col-sm-3">
+  <p>Product Left Main</p>
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="/wf">Weather Forecast</a>
+      <a class="nav-link" href="/product/search">Search</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/wt">Weather</a> <!-- 해외 사이트 -->
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="/product/add">Add</a>
     </li>
   </ul>
   <hr class="d-sm-none">

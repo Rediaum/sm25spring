@@ -40,15 +40,27 @@
 </head>
 <body>
 <ul class="nav justify-content-end">
-    <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/about">About Us</a>
-    </li>
+    <c:choose>
+        <c:when test="${sessionScope.loginid == null}">
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+            </li>
+        </c:when>
+        <c:otherwise>
+            <li class="nav-item">
+                <a class="nav-link" href="/info">${sessionScope.loginid}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+        </c:otherwise>
+    </c:choose>
 </ul>
 <%-- Header Start --%>
 <div class="jumbotron text-center" style="margin-bottom:0">
@@ -81,6 +93,16 @@
             <li class="nav-item">
             <a class="nav-link" href="/ajax">AJAX</a>
             </li>
+
+            <c:if test="${sessionScope.loginid != null}">
+                <li class="nav-item">
+                    <a class="nav-link" href="/cust">Cust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product">Product</a>
+                </li>
+            </c:if>
+
         </ul>
     </div>
 </nav>
