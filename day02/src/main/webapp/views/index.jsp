@@ -21,7 +21,13 @@
         let index = {
             init:function(){
                 let url = '/gettime';
-
+                $.ajax({
+                    url:url,
+                    success:(data)=>{
+                        $('#ctime').text(data);
+                    },
+                    error:()=>{}
+                });
                 setInterval(()=>{
                     $.ajax({
                         url:url,
@@ -41,7 +47,7 @@
 <body>
 <ul class="nav justify-content-end">
     <c:choose>
-        <c:when test="${sessionScope.loginid == null}">
+        <c:when test="${sessionScope.logincust == null}">
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
@@ -54,7 +60,7 @@
         </c:when>
         <c:otherwise>
             <li class="nav-item">
-                <a class="nav-link" href="/info">${sessionScope.loginid}</a>
+                <a class="nav-link" href="/info">${sessionScope.logincust.custName}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Log Out</a>
@@ -93,8 +99,11 @@
             <li class="nav-item">
             <a class="nav-link" href="/ajax">AJAX</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/productitem">ProductItem</a>
+            </li>
 
-            <c:if test="${sessionScope.loginid != null}">
+            <c:if test="${sessionScope.logincust.custId == 'admin'}">
                 <li class="nav-item">
                     <a class="nav-link" href="/cust">Cust</a>
                 </li>
