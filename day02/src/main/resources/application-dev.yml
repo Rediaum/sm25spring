@@ -24,3 +24,9 @@ mybatis:
 logging:
   level:
     root: info
+
+
+app:
+  dir:
+    imgsdir: file:///C:/sm25spring/imgs/
+    uploadimgsdir: C:/sm25spring/imgs/
