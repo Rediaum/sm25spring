@@ -6,7 +6,7 @@
   <p>Product Left Main</p>
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="/product/search">Search</a>
+      <a class="nav-link" href="/product/get">Get</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/product/add">Add</a>

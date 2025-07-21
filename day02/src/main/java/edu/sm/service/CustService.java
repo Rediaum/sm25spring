@@ -1,7 +1,8 @@
-package edu.sm.repository;
+package edu.sm.service;
 
 import edu.sm.dto.Cust;
 import edu.sm.frame.SmService;
+import edu.sm.repository.CustRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
