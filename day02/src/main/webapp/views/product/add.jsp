@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="cate">Cate Id:</label>
-            <input type="number" class="form-control" placeholder="Enter cate id" id="cate" name="cateId">
+            <input type="number" class="form-control" placeholder="Enter cate id" id="cate" name="categoryId">
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
     </form>

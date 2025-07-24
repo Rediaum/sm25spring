@@ -5,10 +5,10 @@
 <mapper namespace="edu.sm.repository.ProductRepository">
 
     <select id="select" parameterType="Integer" resultType="Product">
-        SELECT * FROM product p INNER JOIN category c ON p.category_id=c.category_id WHERE p.product_id=#{productId}
+        SELECT p.* FROM product p INNER JOIN cate c ON p.cate_id=c.cate_id WHERE p.product_id=#{productId}
     </select>
     <select id="selectAll" resultType="Product">
-        select * from product p inner join category c on p.category_id = c.category_id
+        select p.* from product p inner join cate c on p.cate_id = c.cate_id
     </select>
     <insert id="insert" parameterType="Product">
         INSERT INTO product VALUES (0,#{productName},#{productPrice},#{discountRate}, #{productImg}, NOW(), NOW(), #{cateId})

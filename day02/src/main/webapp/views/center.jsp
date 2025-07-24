@@ -78,10 +78,10 @@
     let center = {
         init:function(){
             this.loadData();
-            // 30초마다 자동 새로고침
+            // 10초마다 자동 새로고침
             setInterval(() => {
                 this.loadData();
-            }, 30000);
+            }, 10000);
         },
         loadData:function(){
             let url = '/getdata';

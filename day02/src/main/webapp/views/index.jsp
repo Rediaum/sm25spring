@@ -63,6 +63,9 @@
                 <a class="nav-link" href="/info">${sessionScope.logincust.custName}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/cart">Cart</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/logout">Log Out</a>
             </li>
         </c:otherwise>
